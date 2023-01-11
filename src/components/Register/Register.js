@@ -24,7 +24,7 @@ class Register extends React.Component {
   }
 
   onSubmitSignIn = () => {
-    fetch('https://webdetect-api.vercel.app/register' {
+    fetch('https://webdetect-api.vercel.app/register' , {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
