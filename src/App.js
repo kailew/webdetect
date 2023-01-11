@@ -50,7 +50,7 @@ class App extends Component {
         .then(response => response.json())
         .then(data => {
           if (data && data.id) {
-            fetch(`http://localhost:3000/profile/${data.id}`, {
+            fetch(`https://webdetect-api.vercel.app/${data.id}`, {
               method: 'GET',
               headers: {
                 'Content-Type': 'application/json',
@@ -105,7 +105,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('http://localhost:3000/imageurl', {
+      fetch('https://webdetect-api.vercel.app/imageurl', {
         method: 'post',
         headers: {
           'Content-Type': 'application/json',
@@ -118,7 +118,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('http://localhost:3000/image', {
+          fetch('https://webdetect-api.vercel.app/image', {
             method: 'put',
             headers: {
               'Content-Type': 'application/json',
